@@ -1,0 +1,24 @@
+% 4.
+
+function cmptCrossProduct()
+
+    
+    vect1 = input('please enter first vector: ');
+    vect2 = input('please enter second vector: ');
+
+    
+    if numel(vect1) ~= 3 || numel(vect2) ~= 3
+        fprintf('vectors must be three-dimensional! \n');
+        return;
+    end
+
+    
+    result = [vect1(2)*vect2(3) - vect1(3)*vect2(2);
+              vect1(3)*vect2(1) - vect1(1)*vect2(3);
+              vect1(1)*vect2(2) - vect1(2)*vect2(1)];
+
+   
+    fprintf('cross product: \n');
+    disp(result);
+    
+end

@@ -1,0 +1,11 @@
+% 3.
+
+function euclidean_norm = cmptEuclideanNorm(vect)
+ 
+    squared_value = vect .^ 2;
+
+    sum_of_square = sum(squared_value);
+    
+    euclidean_norm = sqrt(sum_of_square);
+
+end
