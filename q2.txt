@@ -1,0 +1,12 @@
+% 2.
+
+
+function dot_product = cmptDotProduct(vect1, vect2)
+
+    if length(vect1) ~= length(vect2)
+        error('lengths are not the same !!!');
+    end
+
+
+    dot_product = sum(vect1 .* vect2);
+end
