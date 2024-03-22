@@ -1,0 +1,69 @@
+% 1.Vector Addition: Write a MATLAB script that takes two vectors of the same length as input and calculates their sum. Display the resulting vector. Ensure that
+your script handles vectors of different lengths gracefully.
+
+vec1 = input('First vector: ');
+
+vec2 = input('Second vector: ');
+
+if length(vec1) ~= length(vec2)
+    disp('Error');
+else
+    sum = vec1 + vec2;
+    disp(sum);
+end
+
+% 2.Vector Dot Product: Implement a MATLAB function to compute the dot product of two given vectors. The function should return a scalar value representing the 
+dot product. Test your function with different pairs of vectors.
+
+vec1 = input('First vector: ');
+
+vec2 = input('Second vector: ');
+
+if length(vec1) ~= length(vec2)
+    disp('Error');
+else
+    dot = sum(vec1 .* vec2);
+    disp(dot);
+end
+
+% 3.Vector Norm Calculation: Create a MATLAB function that calculates the Euclidean norm (L2 norm) of a given vector. The function should take the vector as 
+input and return its norm. Test your function with various vectors.
+
+squaredElements = vector .^ 2;
+
+sumSquared = sum(squaredElements);
+
+norm = sqrt(sumSquared);
+
+end
+
+% 4.Vector Cross Product: Write a MATLAB script to compute the cross product of two 3-dimensional vectors. Ensure that your script handles vectors of appropriate 
+dimensions and display the resulting vector.
+
+if numel(vec1) ~= 3 || numel(vec2) ~= 3
+    error('Vectors must be 3-dimensional.');
+end
+
+cross = cross(vec1, vec2);
+
+disp(cross);
+
+end
+
+% 5.Vector Sorting: Implement a MATLAB function to sort a given vector inascending order. You can use any sorting algorithm of your choice(e.g., bubblesort, 
+quicksort, etc.). Test your function with different input vectors to ensurecorrectness and efficiency.
+
+n = length(vector);
+
+sortedVector = vector;
+
+    for i = 1:n-1
+        for j = 1:n-i
+            if sortedVector(j) > sortedVector(j+1)           
+                temp = sortedVector(j);
+                sortedVector(j) = sortedVector(j+1);
+                sortedVector(j+1) = temp;
+            end
+        end
+    end
+end
