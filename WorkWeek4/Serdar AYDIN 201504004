@@ -1,0 +1,91 @@
+Question 1-
+
+v1 = input('Enter the first vector: ');
+v2 = input('Enter the second vector : ');
+
+vektor1 = num2str(v1) - '0';
+vektor2 = num2str(v2) - '0'
+
+if length(vektor1) == length(vektor2)
+    sum_vector = vektor1 + vektor2;
+    disp('Sum of the vectors:');
+    disp(sum_vector);
+else
+    len_diff = abs(length(vektor1) - length(vektor2));
+    if length(vektor1) > length(vektor2)
+        vektor2 = [vektor2, zeros(1, len_diff)]; 
+    else
+       vektor1 = [vektor1, zeros(1, len_diff)]; 
+    end
+  
+    sum_vector = vektor1 + vektor2;
+    disp('Sum of the vectors :');
+    disp(sum_vector);
+end
+-------------------------------------------------------
+Question 2-
+
+v1 = input('Enter the first vector: ');
+v2 = input('Enter the second vector : ');
+
+vektor1 = num2str(v1) - '0';
+vektor2 = num2str(v2) - '0'
+ if length(vektor1) ~= length(vektor2)
+disp('Given vectors are not same length');
+end
+dot_product = dot(vektor1, vektor2);
+
+disp('Dot product:');
+disp(dot_product);
+end 
+--------------------------------------------------------
+Question 3- 
+v1 = input('Enter values for vector: ');
+vektor1 = num2str(v1) - '0';
+a = norm(vektor1);
+disp('Norm of the entered vector :')
+disp(a)
+
+--------------------------------------------------------
+
+Question 4-
+
+
+v1 = input('Enter the first vector: ');
+v2 = input('Enter the second vector :');
+
+vektor1 = num2str(v1) - '0';
+vektor2 = num2str(v2) - '0';
+
+if length(vektor1) ~= 3 || length(vektor2) ~= 3
+    error('Vektors must have 3 dimentions');
+end
+
+cross_product = cross(vektor1, vektor2);
+
+disp('cross product:');
+disp(cross_product);
+
+---------------------------------------------------------
+
+Question 5-
+
+vektor1 = input('Enter values for vector: ');
+v1 = num2str(vektor1) - '0';
+
+
+ n = length(v1);
+for i = 1:n-1
+        for j = 1:n-i
+            if v1(j) > v1(j+1)
+                temp = v1(j);
+                v1(j) = v1(j+1);
+                v1(j+1) = temp;
+            end
+        end
+    end
+disp(v1)
+
+
+
+
