@@ -1,0 +1,88 @@
+1-vector_Cross_prod
+<<<<<<< HEAD
+vector1 = input('Enter the first vector ( e.g., [1 2 3]): ');
+vector2 = input('Enter the second vector ( e.g., [4 5 6]): ');
+
+if numel(vector1) ~= 3 || numel(vector2) ~= 3
+    fprintf('Vectors must be 3-dimensional.\n');
+else
+  
+    cross_product = cross(vector1, vector2);
+    
+    fprintf('First vector: %s\n', mat2str(vector1));
+    fprintf('Second vector: %s\n', mat2str(vector2));
+    fprintf('Cross product: %s\n', mat2str(cross_product));
+end
+=======
+vector1 = input('Enter the first vector ( e.g., [1 2 3]): ');
+vector2 = input('Enter the second vector ( e.g., [4 5 6]): ');
+
+if numel(vector1) ~= 3 || numel(vector2) ~= 3
+    fprintf('Vectors must be 3-dimensional.\n');
+else
+  
+    cross_product = cross(vector1, vector2);
+    
+    fprintf('First vector: %s\n', mat2str(vector1));
+    fprintf('Second vector: %s\n', mat2str(vector2));
+    fprintf('Cross product: %s\n', mat2str(cross_product));
+end
+>>>>>>> b7b078c1276648ffa8b5ba6dbb0e1f2cbcc6c692
+
+2-vector_dot
+function sum_vector = vector_dot(~, ~)
+    try
+    vector1 = input('Enter the elements of the first vector: ');
+    vector2 = input('Enter the elements of the second vector ');
+   
+    dp = dot(vector1, vector2);
+
+    disp('Dot product:');
+    disp(dp);
+  
+catch
+    disp('Error:vectors are not equal in length');
+end
+
+3-vectorAddition
+% Addition of vectors with input
+
+vector1 = input('Enter first vector: ');
+vector2 = input('Enter second vector: ');
+
+if length(vector1) ~= length(vector2)
+    disp('Vectors must have the same length.');
+else
+    resultVector = vector1 + vector2;
+
+    disp('Vector addition result:');
+    disp(resultVector);
+end
+4-vectorNorm
+vector = input('Enter the vector: ');
+
+euclideanNorm = sqrt(sum(vector.^2));
+
+disp(['Euclidean norm of the vector: ', num2str(euclideanNorm)]);
+
+5-vector_Sort
+vector = input('Enter the vector to be sorted: ');
+
+if ~isvector(vector)
+    disp('Error: Input must be a vector.');
+else
+    n = length(vector);
+    
+    for i = 1:n-1
+        for j = 1:n-i
+            if vector(j) > vector(j+1)
+                temp = vector(j);
+                vector(j) = vector(j+1);
+                vector(j+1) = temp;
+            end
+        end
+    end
+
+    disp('Sorted vector in ascending order:');
+    disp(vector);
+end
