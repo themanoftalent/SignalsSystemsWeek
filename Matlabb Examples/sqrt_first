@@ -1,0 +1,3 @@
+x= input("Enter a number to have sqrt")
+y= sqrt(x)
+disp(y)
