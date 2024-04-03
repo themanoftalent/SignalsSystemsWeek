@@ -1,0 +1,29 @@
+Q4-
+
+n = -5:15;
+signal = zeros(size(n)); 
+indices_1 = find(n == 0 | n == 5 | n == 10);
+signal(indices_1) = 1;
+index_2 = find(n == 3);
+signal(index_2) = 2;
+figure;
+title('Stem Plot of Discrete Signal');
+%stem(n, signal, 'filled', 'MarkerSize', 8); 
+stem(n, signal, 'Marker', 'o', 'Color', 'red', 'MarkerFaceColor','g','LineWidth', 2);
+title('Discrete Signal of y[n]','Color','red');
+xlabel('n');
+ylabel('y[n]');
+grid on; 
+-------------------------------------------------------------------------------------
+Q5-
+
+mag = 2; 
+f = 10; 
+t = (0:0.001:1); 
+signal_f = mag * cos(2*pi*f*t);
+figure('Name','1000 Hz Frequency' );
+plot(t, signal_f, Marker=".",MarkerSize= 10); 
+title('magcos(2pift');
+xlabel('Time (sec)');
+ylabel('Amplitude');
+grid on;
