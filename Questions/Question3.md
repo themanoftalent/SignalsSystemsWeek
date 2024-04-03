@@ -1,1 +1,0 @@
-Write a MATLAB code that generates and plots a discrete-time unit step function x(n) defined over the range −20≤n≤20. The function should be 1 for n≥0 and 0 otherwise. Ensure to use a for loop and conditionals for this implementation.

@@ -1,1 +1,0 @@
-Given two discrete signals **x** and **y**, represented by their respective sequences **x** = [0, 2, 3, 4, 0, 0, 0, 0] and **y** = [0, 0, 3, 0, 0, 1, 1, 0], what are the resulting signals when multiplying them element-wise and when adding them together? Please plot these resulting signals against the discrete time variable **n** = [0, 1, 2, 3, 4, 5, 6, 7].
