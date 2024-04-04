@@ -1,0 +1,28 @@
+% Question 4
+
+index_n = -5:15;
+signal_n = zeros(size(index_n));
+
+signal_n(index_n == 3) = 2;
+signal_n(index_n == 0 | index_n == 5 | index_n == 10) = 1;
+
+stem(index_n, signal_n, 'Marker', 'o', 'MarkerSize', 8, 'MarkerEdgeColor', 'blue', 'MarkerFaceColor', 'blue');
+title('Stem Plot of Discrete Signal y[n]');
+xlabel('Index N');
+ylabel('Signal N');
+
+grid on;
+
+% Question 5
+
+mag = 2; 
+frequency = 5; 
+frequency_hz = 1000;
+time = (0:1/frequency_hz:1)';
+
+signal = mag * cos(2*pi*frequency*time);
+
+plot(time, signal, '.', 'LineWidth', 12);
+xlabel('Time(second)');
+ylabel('Amplitude');
+grid on;

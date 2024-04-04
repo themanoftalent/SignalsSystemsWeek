@@ -1,0 +1,34 @@
+%% Q4:
+clc,clearvars
+n = -5:15;
+y = zeros(size(n));
+y(n == 3) = 2;
+y(n == 0 | n == 5 | n == 10) = 1;
+
+
+stem(n, y, 'Marker', 'o', 'MarkerFaceColor', 'red', 'MarkerSize', 8);
+
+title('Discrete Signal y[n]');
+xlabel('n');
+ylabel('Amplitude');
+
+
+grid on;
+
+%% Q5:
+clc,clearvars
+mag = 1; % Magnitude of the cosine signal
+f = 10; % Frequency of the cosine signal in Hz
+t = (0:0.001:1); % time vector
+
+y = mag * cos(2 * pi * f * t);
+
+
+
+plot(t, y, '-bo', 'MarkerEdgeColor', 'b', 'MarkerFaceColor', 'b', 'LineWidth', 0.5);
+
+
+title('mag * cos(2 * pi * f * t)');
+xlabel('Time (s)');
+ylabel('Amplitude');
+
