@@ -2,18 +2,24 @@ Q4-
 
 n = -5:15;
 signal = zeros(size(n)); 
-indices_1 = find(n == 0 | n == 5 | n == 10);
-signal(indices_1) = 1;
-index_2 = find(n == 3);
-signal(index_2) = 2;
+for i=1:length(n)
+
+    if n(i)==3
+   signal(i)=2;
+    end
+    if n(i)==0||n(i)==5||n(i)==10
+        signal(i)=1;
+    end
+end
 figure;
 title('Stem Plot of Discrete Signal');
 %stem(n, signal, 'filled', 'MarkerSize', 8); 
 stem(n, signal, 'Marker', 'o', 'Color', 'red', 'MarkerFaceColor','g','LineWidth', 2);
-title('Discrete Signal of y[n]','Color','red');
+title('Discrete Signal of y[n]','Color','b');
 xlabel('n');
 ylabel('y[n]');
 grid on; 
+
 -------------------------------------------------------------------------------------
 Q5-
 
