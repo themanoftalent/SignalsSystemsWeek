@@ -1,0 +1,67 @@
+1- Vector Addition
+ 
+    v1 = input("Enter the first vector: \n", 's');
+    a = str2num(v1);
+
+    v2 = input("Enter the second vector: \n", 's');
+    b = str2num(v2);
+
+if length(a) ~= length(b)
+    disp('Error. a and b are not equal.');
+else
+    c = a + b;
+    disp(c);
+end
+
+2- Vector Dot Product
+
+    v1 = input("Enter the first vector: \n", 's');
+    a = str2num(v1);
+
+    v2 = input("Enter the second vector: \n", 's');
+    b = str2num(v2);
+
+if length(a) ~= length(b)
+    disp('Error. a and b are not equal.');
+else
+    dotv = dot(a,b);
+    disp(dotv);
+end
+
+3- Vector Norm Calculation
+
+    v1 = input("Enter the first vector: \n", 's');
+    a = str2num(v1);
+    c = norm(a);
+    disp(c);
+
+4- Vector Cross Product
+
+     X = [1, 2, 3; 4, 5, 6; 7, 8, 9];
+     Y = [11, 12, 13; 14, 15, 16; 17, 18, 19];
+     cross_Product = cross(X, Y);
+     disp(cross_Product);
+
+5- Vector Sorting
+
+E = [4,7,2,8,5,3,1,9];
+
+function sort_vector = bubbleSort(vector)
+    n = length(vector);
+    sort_vector = vector;
+
+    for i = 1:n-1
+        for j = 1:n-i
+            if sort_vector(j) > sort_vector(j+1)
+                temp = sort_vector(j);
+                sort_vector(j) = sort_vector(j+1);
+                sort_vector(j+1) = temp;
+            end
+        end
+    end
+end
+
+sort_vector = bubbleSort(E);
+disp('Ordered vector:');
+disp(sort_vector);
+     
