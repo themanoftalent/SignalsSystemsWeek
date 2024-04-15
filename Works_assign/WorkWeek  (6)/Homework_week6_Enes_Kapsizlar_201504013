@@ -1,0 +1,29 @@
+% Exponential Decay Factor
+
+t = (0:0.01:10); 
+decay_factor = 0.8;
+
+signal = exp(-decay_factor * t);
+
+plot(t, signal, 'LineWidth', 2);
+
+title('Exponential Decay Signal');
+xlabel('Time');
+ylabel('Amplitude');
+grid on;
+
+----------------------------------------------
+
+% Step Function
+
+t = -30:0.01:30;
+
+step_func = zeros(size(t));
+step_func(t >= 0) = 1;
+
+plot(t, step_func, 'LineWidth', 2);
+
+title('Step Function');
+xlabel('Time');
+ylabel('Amplitude');
+grid on;
