@@ -1,0 +1,43 @@
+% Q1
+
+value = -5:15;
+
+signal = zeros(size(n)); 
+
+signal(value == 0 | value == 5 | value == 10) = 1;
+signal(value == 3) = 2; 
+
+
+figure('Name','Stem Plot of Discrete Signal','NumberTitle','off','Color','red');
+stem(value, signal, 'filled', 'MarkerSize', 8); 
+title('Discrete Signal of y[n]');
+xlabel('value (n)');
+ylabel('signal (y[n])');
+grid on; 
+
+
+---------------------------------------------------------------------------------------------------
+
+
+% Q2
+
+
+fs = 1000; 
+
+t = 0:1/fs:1; 
+
+mag = 2;
+
+f = 5; 
+
+y = mag * cos(2*pi*f*t);
+
+figure('Name','1000 Hz Sample Frequency Generating Data','NumberTitle','off','Color','red');
+plot(t, y, Marker = ".", MarkerSize = 10);
+
+
+title('1000 Hz Sample Frequency Generating Data');
+xlabel('time (s)');
+ylabel('signal value');
+grid on;
+

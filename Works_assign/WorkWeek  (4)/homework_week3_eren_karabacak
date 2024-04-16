@@ -1,0 +1,109 @@
+1.Write a MATLAB script that takes two vectors of the same
+length as input and calculates their sum. Display the resulting vector. Ensure that
+your script handles vectors of different lengths gracefully.
+
+function sumVectors()
+
+    vect1 = input('please enter first vector: ');
+    vect2 = input('please enter second vector: ');
+
+    if length(vect1) ~= length(vect2)
+        fprintf('lengths are not the same !!!\n');
+        return;
+    end
+
+    result = vect1 + vect2;
+
+    fprintf('sum of vectors: \n');
+    disp(result);
+    
+end
+
+
+2.Implement a MATLAB function to compute the dot product
+of two given vectors. The function should return a scalar value representing the
+dot product. Test your function with different pairs of vectors.
+
+
+function dotProduct = cmptDotProduct(vect1, vect2)
+
+    if length(vect1) ~= length(vect2)
+        error('lengths are not the same !!!');
+    end
+
+
+    dotProduct = sum(vect1 .* vect2);
+end
+
+
+
+3.Create a MATLAB function that calculates the
+Euclidean norm (L2 norm) of a given vector. The function should take the vector
+as input and return its norm. Test your function with various vectors.
+
+function euclidean_norm = cmptEuclideanNorm(vect)
+ 
+    squared_value = vect .^ 2;
+
+    sum_of_square = sum(squared_value);
+    
+    euclidean_norm = sqrt(sum_of_square);
+
+end
+
+
+
+4.Write a MATLAB script to compute the cross product of
+two 3-dimensional vectors. Ensure that your script handles vectors of appropriate
+dimensions and display the resulting vector.
+
+function cmptCrossProduct()
+
+    
+    vect1 = input('please enter first vector: ');
+    vect2 = input('please enter second vector: ');
+
+    
+    if numel(vect1) ~= 3 || numel(vect2) ~= 3
+        fprintf('vectors must be three-dimensional! \n');
+        return;
+    end
+
+    
+    result = [vect1(2)*vect2(3) - vect1(3)*vect2(2);
+              vect1(3)*vect2(1) - vect1(1)*vect2(3);
+              vect1(1)*vect2(2) - vect1(2)*vect2(1)];
+
+   
+    fprintf('cross product: \n');
+    disp(result);
+    
+end
+
+5.Implement a MATLAB function to sort a given vector in
+ascending order. You can use any sorting algorithm of your choice (e.g., bubble
+sort, quicksort, etc.). Test your function with different input vectors to ensure
+correctness and efficiency.
+
+function sortedVector = bubbleSort(vector)
+    n = length(vector);
+    
+    % Tüm vektör boyunca geçişler yap
+    for i = 1:n
+        % Her geçişte vektör boyunca elemanları karşılaştır
+        for j = 1:(n-i)
+            % Eğer bir önceki eleman bir sonraki elemandan büyükse,
+            % yer değiştir
+            if vector(j) > vector(j+1)
+                temp = vector(j);
+                vector(j) = vector(j+1);
+                vector(j+1) = temp;
+            end
+        end
+    end
+    
+    % Sıralanmış vektörü döndür
+    sortedVector = vector;
+end
+
+

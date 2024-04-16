@@ -1,0 +1,21 @@
+
+
+```matlab
+% Define the range of n
+n = -5:15;
+
+% Define the signal y[n]
+y = zeros(size(n));
+y(n == 3) = 2;
+y(ismember(n, [0, 5, 10])) = 1;
+
+% Generate stem plot
+stem(n, y, 'Marker', 'o', 'MarkerEdgeColor', 'blue', 'MarkerFaceColor', 'blue');
+
+% Title and labels
+title('Stem Plot of Discrete Signal y[n]');
+xlabel('n');
+ylabel('y[n]');
+
+% Grid lines
+grid on;

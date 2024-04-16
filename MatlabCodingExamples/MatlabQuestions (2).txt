@@ -1,0 +1,40 @@
+% Define the discrete time variable 'n' and the signal 'x'
+n = [0 1 2 3 4 5 6 7];
+x = [0 2 3 4 0 0 0 0];
+
+% Plot the signal 'x'
+figure(1)
+stem(n, x, 'filled') % Stem plot of x
+title('Signal x') % Title of the plot
+xlabel('Time (n)') % Label for the x-axis
+ylabel('Amplitude') % Label for the y-axis
+
+% Define the signal 'y'
+y = [0 0 3 0 0 1 1 0];
+
+% Plot the signal 'y'
+figure(2)
+stem(n, y, 'filled') % Stem plot of y
+title('Signal y') % Title of the plot
+xlabel('Time (n)') % Label for the x-axis
+ylabel('Amplitude') % Label for the y-axis
+
+% Multiply signals 'x' and 'y' element-wise
+g = y .* x;
+
+% Plot the resulting signal from the element-wise multiplication
+figure(3)
+stem(n, g, 'filled') % Stem plot of the result 'g'
+title('Element-wise Multiplication of x and y') % Title of the plot
+xlabel('Time (n)') % Label for the x-axis
+ylabel('Amplitude') % Label for the y-axis
+
+% Add signals 'x' and 'y'
+h = y + x;
+
+% Plot the resulting signal from the addition
+figure(4)
+stem(n, h, 'filled') % Stem plot of the result 'h'
+title('Addition of x and y') % Title of the plot
+xlabel('Time (n)') % Label for the x-axis
+ylabel('Amplitude') % Label for the y-axis

@@ -1,0 +1,1 @@
+Can you write a simple MATLAB code to create and visualize a step function? The function should be plotted over a range of time from -30 to 30. Once you've written the code, explain how it works and why we use certain conditions to define the step function

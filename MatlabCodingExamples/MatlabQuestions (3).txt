@@ -1,0 +1,20 @@
+clc;         % Clear command window
+clear all;   % Clear all variables from the workspace
+
+%% Section break (optional but commonly used for organization and readability)
+
+n = -20:20;  % Define the range of discrete values for the independent variable 'n'
+
+x = 0 .* n;  % Initialize the output signal 'x' with zeros, having the same length as 'n'
+
+% Iterate through each element of 'n'
+for i = 1:length(n)
+    % Check if the current value of 'n' is non-negative
+    if (n(i) >= 0)
+        x(i) = 1;  % If 'n' is non-negative, set the corresponding value of 'x' to 1
+    end
+end
+
+% Plot the discrete-time signal using stem function
+stem(n, x, 'filled');  % 'filled' option fills the stems with color
+

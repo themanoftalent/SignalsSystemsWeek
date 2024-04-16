@@ -1,0 +1,21 @@
+
+
+
+% Define the range of values for n
+
+n = -10:10;
+
+% Initialize the vector x with zeros
+x = zeros(size(n));
+
+% Loop through each element of n
+for i = 1:length(n)
+    % Check if the current element of n is equal to 0
+    if (n(i) == 0)
+        % If true, set the corresponding element of x to 1
+        x(i) = 1;
+    end
+end
+
+% Plot a stem plot of n vs. x, with filled markers
+stem(n, x, 'filled');
