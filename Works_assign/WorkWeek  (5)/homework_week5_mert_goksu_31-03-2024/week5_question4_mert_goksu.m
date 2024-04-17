@@ -19,11 +19,21 @@ end
 
 % r = red, k = black, b = blue
 
-figure(1),stem(x,y,'filled',MarkerFaceColor ='b', LineStyle='-',LineWidth=2,MarkerSize=7)
-
-figure(2),plot(x,y,MarkerFaceColor="k",LineStyle="-.", LineWidth=2,MarkerSize=5)
-
+figure(1),stem(x,y,'filled',MarkerFaceColor ='b', LineStyle='-',LineWidth=2,MarkerSize=7);
+title("Figure 1")
 grid off;
+
+xlabel('x');
+ylabel('Amplitude');
+
+xlim([min(x) max(x)]);
+ylim([0 2.5]);
+
+legend('Unit Impulse Signal', 'Location' , 'best');
+
+figure(2),plot(x,y,MarkerFaceColor="k",LineStyle="-.", LineWidth=2,MarkerSize=5);
+title("Figure 2")
+grid on;
 
 xlabel('x');
 ylabel('Amplitude');
