@@ -1,0 +1,48 @@
+%% Q1:
+
+% Define the time vector
+time_vector = -200 : 200;
+
+% decay factors and angular frequency
+decay_factor_1 = 0.80;
+decay_factor_2 = 0.65;
+omega = pi;
+
+% Calculate signals using vectorized operations
+signal_1 = (decay_factor_1 .^ time_vector) .* cos(omega * time_vector);
+signal_2 = (decay_factor_2 .^ time_vector) .* cos(omega * time_vector);
+
+% Plot the signals
+figure;
+
+% Plot Signal 1
+subplot(2,1,1);
+stem(time_vector, signal_1, 'filled', 'LineStyle', '-');
+title('Exponential Decay Signal (Decay Factor = 0.80)');
+xlabel('Time');
+ylabel('Amplitude');
+grid on;
+
+% Plot Signal 2
+subplot(2,1,2);
+stem(time_vector, signal_2, 'filled', 'LineStyle', '-');
+title('Exponential Decay Signal (Decay Factor = 0.65)');
+xlabel('Time');
+ylabel('Amplitude');
+grid on;
+
+%% Q2:
+% Define the time vector
+time_vector = -30 : 30;
+
+% Initialize the step function signal
+step_function = zeros(size(time_vector));
+step_function(time_vector >= 0) = 1;  % Set the value to 1 for time >= 0
+
+% Plot the step function
+plot(time_vector, step_function, 'LineWidth', 2);
+title('Unit Step Function');
+xlabel('Time');
+ylabel('Amplitude');
+ylim([-0.2, 1.2]);  % Set y-axis limits to show step function
+grid on;
