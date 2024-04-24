@@ -23,7 +23,7 @@ i. Students should be prepared to address inquiries and engage in discussions ab
 
 j. The instructor will assess each project based on creativity, technical proficiency, presentation clarity, and adherence to project guidelines.
 
-k. The deadline for project submission is four weeks after the midterm, spanning from June 29th to May 29th, 2024.
+k. The deadline for project submission is four weeks after the midterm, spanning from May 6th to June 10th, 2024.
 
 l. Each group must submit a written report, a presentation slide deck, and their project presentation.
 
