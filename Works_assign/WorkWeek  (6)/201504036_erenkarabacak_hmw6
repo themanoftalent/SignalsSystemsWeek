@@ -1,0 +1,21 @@
+e = 0;
+
+t = -30:30;
+
+step_function = t >= e;
+
+t_integer = -30:30;
+
+
+plot(t_integer, step_function, 'b', 'LineWidth', 2);
+hold on;
+stem(t_integer, step_function, 'filled', 'MarkerSize', 4, 'Color', 'b');
+hold off;
+
+xticks(-30:5:30);
+
+ylim([0 5]);
+
+title('Adım Fonksiyonu');
+xlabel('Zaman (Tam Sayılar)');
+ylabel('Değer');

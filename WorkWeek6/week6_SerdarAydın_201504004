@@ -1,0 +1,27 @@
+
+Q1-
+t = -30:0.1:30;
+a = zeros(size(t)); 
+a(t >= 0) = 1;
+plot(t, a, 'green', 'LineWidth', 2);
+xlabel('Time');
+ylabel('Amplitude');
+title('Step Function');
+grid on;
+
+Step functions have many usage areas. In our class, we use step functions to indicate where the signal begins and how it behaves.
+
+--------------------------------------------------------------------------------
+Q2-
+
+fs = 100;
+duration = 10; 
+decay_factor = 0.8; 
+t = linspace(0, duration, fs * duration);
+signal = exp(-decay_factor * t);
+plot(t, signal, 'green', 'LineWidth', 2);
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('Exponential Decay Signal');
+grid on;
+

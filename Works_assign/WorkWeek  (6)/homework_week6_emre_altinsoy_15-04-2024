@@ -1,0 +1,10 @@
+% Creating the step function
+x = -30:0.001:30;
+y = zeros(size(x));
+y(x >= 0) = 1;
+
+plot(x, y);
+title('Step Function');
+xlabel('x');
+ylabel('y');
+grid on;

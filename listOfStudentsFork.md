@@ -24,7 +24,7 @@ These are the students who fork and commit in Signals and Systems:
 - @Excalibur312 (Emre Kaya)
 - @emrealtinsoy (Emre Altinsoy)
 - @emrecode087 (Emre Baş)
-- @Gharosss (Gharo)
+- @Gharosss (Yetkin Bilge Çınar)
 - @EmirPetek (Emir Petek)
 - @decaelum (Yağız)
 - @ykdid (Yusuf Kaya)
@@ -35,6 +35,6 @@ These are the students who fork and commit in Signals and Systems:
 - @halenursarisen (Halenur Sarisen)
 - @KauzKnecht (Bahadır Emre)
 - @DavutKırtak (Davut Kırtak)
-- @yasin (Yasin)
+- @mysCod3r (Muhammed Yasin Şenocak)
 
 If your name is not on the list, please get in touch and prove that you fork and commit.
